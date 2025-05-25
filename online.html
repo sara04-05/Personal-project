@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="online.css">
+  <title>Online Degrees - Web & Cybersecurity</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #111;
+      color: #fff;
+    }
+    .degree-card {
+      background: #181818;
+      margin: 15px 0;
+      padding: 20px;
+      border-left: 5px solid #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+      color: #fff;
+    }
+    .degree-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+    .degree-card h2 {
+      color: #fff;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn:hover, .btn:focus {
+      background: #111;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header style="background: #111; color: #fff; padding: 40px 0 28px 0; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.15);">
+    <h1 style="font-size: 2.7rem; font-weight: 700; margin-bottom: 10px; letter-spacing: 1px;">
+      <span style="color: #fff;">DevPath</span> <span style="color: #bbb;">Online Degrees</span>
+    </h1>
+    <p style="font-size: 1.25rem; color: #ccc; margin: 0;">
+      Advance your career in <span style="color: #fff; font-weight: 600;">Web Development</span> and <span style="color: #fff; font-weight: 600;">Cybersecurity</span> with flexible, expert-led programs.
+    </p>
+  </header>
+
+  <nav style="background: #181818; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <ul style="display: flex; justify-content: center; margin: 0; padding: 0; list-style: none;">
+      <li style="margin: 0;">
+        <a href="#html" style="display: block; padding: 16px 32px; color: #fff; text-decoration: none; font-weight: 600; letter-spacing: 0.5px; transition: background 0.2s;">HTML</a>
+      </li>
+      <li style="margin: 0;">
+        <a href="#css" style="display: block; padding: 16px 32px; color: #fff; text-decoration: none; font-weight: 600; letter-spacing: 0.5px; transition: background 0.2s;">CSS</a>
+      </li>
+      <li style="margin: 0;">
+        <a href="#javascript" style="display: block; padding: 16px 32px; color: #fff; text-decoration: none; font-weight: 600; letter-spacing: 0.5px; transition: background 0.2s;">JavaScript</a>
+      </li>
+      <li style="margin: 0;">
+        <a href="#cybersecurity" style="display: block; padding: 16px 32px; color: #fff; text-decoration: none; font-weight: 600; letter-spacing: 0.5px; transition: background 0.2s;">Cybersecurity</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <div class="degree-card" id="html">
+      <h2>HTML Development</h2>
+      <p>Learn the building blocks of the web. This program covers semantic structure, accessibility, forms, and layout best practices.</p>
+      <a href="#" class="btn" onclick="enroll('HTML')">Enroll Now</a>
+    </div>
+
+    <div class="degree-card" id="css">
+      <h2>CSS Design & Layout</h2>
+      <p>Master responsive design, animations, Flexbox, Grid, and pre-processors like Sass to make beautiful websites.</p>
+      <a href="#" class="btn" onclick="enroll('CSS')">Enroll Now</a>
+    </div>
+
+    <div class="degree-card" id="javascript">
+      <h2>JavaScript Programming</h2>
+      <p>Become proficient in modern JavaScript (ES6+), DOM manipulation, APIs, asynchronous programming, and frameworks like React.</p>
+      <a href="#" class="btn" onclick="enroll('JavaScript')">Enroll Now</a>
+    </div>
+
+    <div class="degree-card" id="cybersecurity">
+      <h2>Cybersecurity Fundamentals</h2>
+      <p>Protect digital infrastructure with hands-on learning in network security, encryption, penetration testing, and ethical hacking.</p>
+      <a href="#" class="btn" onclick="enroll('Cybersecurity')">Enroll Now</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2036 Scholar Organization. All rights reserved. &nbsp;&nbsp;&nbsp; </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function enroll(degree) {
+      alert('Enrollment for ' + degree + ' is currently unavailable. Please check back later.');
+    }
+  </script>
+
+</body>
+</html>
+
