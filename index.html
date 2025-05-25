@@ -294,8 +294,8 @@
           <a href="#!" data-filter=".wordpress">Wordpress</a>
         </li>
       </ul>
-      <div class="row event_box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+      <div class="row event_box" id="course-list">
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer webdesign">
           <div class="events_item">
             <div class="thumb">
               <a href="#"><img src="assets/images/course-01.jpg" alt=""></a>
@@ -308,7 +308,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer development">
           <div class="events_item">
             <div class="thumb">
               <a href="#"><img src="assets/images/course-02.jpg" alt=""></a>
@@ -321,7 +321,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer wordpress">
           <div class="events_item">
             <div class="thumb">
               <a href="#"><img src="assets/images/course-03.jpg" alt=""></a>
@@ -334,7 +334,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer development">
           <div class="events_item">
             <div class="thumb">
               <a href="#"><img src="assets/images/course-04.jpg" alt=""></a>
@@ -347,7 +347,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer wordpress">
           <div class="events_item">
             <div class="thumb">
               <a href="#"><img src="assets/images/course-05.jpg" alt=""></a>
@@ -360,7 +360,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer webdesign">
           <div class="events_item">
             <div class="thumb">
               <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
@@ -376,6 +376,1046 @@
       </div>
     </div>
   </section>
+
+  <section class="section" id="ai-course-generator" style="background: #fff; padding: 60px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-4">
+          <div class="section-heading">
+            <h6 style="color:#000; letter-spacing:2px;">AI Course Generator</h6>
+            <h2 style="color:#000; font-weight:700;">Personalized Course Recommendation</h2>
+            <p style="color:#222;">Answer a few questions and let our AI recommend the perfect course for you in HTML, CSS, JavaScript, or Cybersecurity. Get a tailored description, estimated duration, difficulty, and a direct link to start learning!</p>
+          </div>
+        </div>
+      </div>
+      <form id="ai-course-form" class="mb-4 shadow" style="max-width:540px;margin:auto;background:#fff;padding:36px 32px;border-radius:22px;">
+        <div class="mb-3">
+          <label for="interest" class="form-label" style="font-weight:500; color:#000;">Which topic interests you most?</label>
+          <select class="form-control" id="interest" required>
+            <option value="">Select...</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+            <option value="cybersecurity">Cybersecurity</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="level" class="form-label" style="font-weight:500; color:#000;">What is your current skill level?</label>
+          <select class="form-control" id="level" required>
+            <option value="">Select...</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="goal" class="form-label" style="font-weight:500; color:#000;">What is your main goal?</label>
+          <select class="form-control" id="goal" required>
+            <option value="">Select...</option>
+            <option value="build">Build a project</option>
+            <option value="career">Advance my career</option>
+            <option value="learn">Learn fundamentals</option>
+            <option value="secure">Secure my website</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="time" class="form-label" style="font-weight:500; color:#000;">How much time can you dedicate per week?</label>
+          <select class="form-control" id="time" required>
+            <option value="">Select...</option>
+            <option value="2">2 hours</option>
+            <option value="5">5 hours</option>
+            <option value="10">10+ hours</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="style" class="form-label" style="font-weight:500; color:#000;">Preferred learning style?</label>
+          <select class="form-control" id="style" required>
+            <option value="">Select...</option>
+            <option value="video">Video lessons</option>
+            <option value="text">Text tutorials</option>
+            <option value="interactive">Interactive/practice</option>
+            <option value="project">Project-based</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-100" style="background:#000; color:#fff; border:none; font-weight:600; font-size:1.1em;">Generate Advanced Recommendation</button>
+      </form>
+      <div id="ai-course-result" style="max-width:700px;margin:auto;"></div>
+    </div>
+  </section>
+
+  <script>
+    // Simple AI course generator
+    const courseTitles = [
+      "React for Beginners",
+      "Python Data Science",
+      "Node.js Crash Course",
+      "Ethical Hacking Basics",
+      "UI/UX Design Principles",
+      "Machine Learning Intro",
+      "Advanced CSS Animations",
+      "Vue.js Essentials"
+    ];
+    const courseAuthors = [
+      "Alex Kim", "Maria Lopez", "David Hutson", "Stella Blair", "Sophia Rose", "Cindy Walker"
+    ];
+    const courseCategories = [
+      "Development", "Webdesign", "Wordpress", "Cybersecurity"
+    ];
+    const courseImages = [
+      "assets/images/course-01.jpg",
+      "assets/images/course-02.jpg",
+      "assets/images/course-03.jpg",
+      "assets/images/course-04.jpg",
+      "assets/images/course-05.jpg",
+      "assets/images/course-06.jpg"
+    ];
+
+    function getRandom(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function generateAICourse() {
+      const title = getRandom(courseTitles);
+      const author = getRandom(courseAuthors);
+      const category = getRandom(courseCategories);
+      const image = getRandom(courseImages);
+      const price = Math.floor(Math.random() * 500) + 100;
+      const html = `
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer ${category.toLowerCase()}">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="${image}" alt=""></a>
+              <span class="category">${category}</span>
+              <span class="price"><h6><em>$</em>${price}</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">${author}</span>
+              <h4>${title}</h4>
+            </div>
+          </div>
+        </div>
+      `;
+      document.getElementById('course-list').insertAdjacentHTML('beforeend', html);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.getElementById('generate-course-btn');
+      if (btn) {
+        btn.addEventListener('click', generateAICourse);
+      }
+    });
+
+    // AI Course Generator Logic
+    const courseData = {
+      html: {
+        beginner: {
+          build: {
+            title: "HTML Basics: Build Your First Web Page",
+            desc: "Start from scratch and create your first web page using HTML. Learn about tags, structure, and best practices.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "HTML for Career Starters",
+            desc: "Master the essentials of HTML to kickstart your journey in web development.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "HTML Fundamentals",
+            desc: "Understand the building blocks of the web and how to structure content effectively.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "HTML & Web Security Basics",
+            desc: "Learn how to write safe HTML and avoid common security pitfalls.",
+            link: "https://shkolladigjitale.com/"
+          }
+        },
+        intermediate: {
+          build: {
+            title: "HTML5 Projects",
+            desc: "Apply your HTML knowledge to real-world projects using HTML5 features.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "Professional HTML Techniques",
+            desc: "Take your HTML skills to the next level for professional web development.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "Semantic HTML & Accessibility",
+            desc: "Deepen your understanding of semantic markup and accessible web design.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "HTML Security Practices",
+            desc: "Learn how to prevent XSS and other vulnerabilities in your HTML code.",
+            link: "https://shkolladigjitale.com/"
+          }
+        },
+        advanced: {
+          build: {
+            title: "Advanced HTML & APIs",
+            desc: "Integrate HTML with APIs and advanced web technologies.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "HTML for Web Professionals",
+            desc: "Optimize and maintain large-scale HTML projects for enterprise environments.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "Cutting-Edge HTML Features",
+            desc: "Explore the latest HTML standards and experimental features.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "HTML Security Mastery",
+            desc: "Master advanced security techniques for HTML-based applications.",
+            link: "https://shkolladigjitale.com/"
+          }
+        }
+      },
+      css: {
+        beginner: {
+          build: {
+            title: "CSS Basics: Style Your First Website",
+            desc: "Learn how to add colors, fonts, and layouts to your web pages with CSS.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "CSS for Career Starters",
+            desc: "Get the foundational CSS skills needed for entry-level web design jobs.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "CSS Fundamentals",
+            desc: "Understand selectors, properties, and how to style HTML elements.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "CSS & Web Security Basics",
+            desc: "Learn how CSS can impact security and best practices for safe styling.",
+            link: "https://shkolladigjitale.com/"
+          }
+        },
+        intermediate: {
+          build: {
+            title: "Responsive CSS Projects",
+            desc: "Create responsive layouts and modern designs using Flexbox and Grid.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "Professional CSS Techniques",
+            desc: "Advance your CSS skills for professional web development.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "CSS Animations & Transitions",
+            desc: "Bring your websites to life with CSS animations and transitions.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "CSS Security Practices",
+            desc: "Avoid common CSS vulnerabilities and ensure your stylesheets are safe.",
+            link: "https://shkolladigjitale.com/"
+          }
+        },
+        advanced: {
+          build: {
+            title: "Advanced CSS & Preprocessors",
+            desc: "Master Sass, Less, and advanced CSS methodologies for scalable projects.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "CSS for Web Professionals",
+            desc: "Optimize and maintain large-scale CSS codebases for enterprise sites.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "Cutting-Edge CSS Features",
+            desc: "Explore the latest CSS standards and experimental features.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "CSS Security Mastery",
+            desc: "Master advanced security techniques for CSS and web styling.",
+            link: "https://shkolladigjitale.com/"
+          }
+        }
+      },
+      js: {
+        beginner: {
+          build: {
+            title: "JavaScript Basics: Make Your Site Interactive",
+            desc: "Learn how to add interactivity to your web pages with JavaScript fundamentals.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "JavaScript for Career Starters",
+            desc: "Get the essential JavaScript skills for entry-level developer roles.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "JavaScript Fundamentals",
+            desc: "Understand variables, functions, and how to manipulate the DOM.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "JavaScript & Web Security Basics",
+            desc: "Learn how to write safe JavaScript and avoid common security issues.",
+            link: "https://shkolladigjitale.com/"
+          }
+        },
+        intermediate: {
+          build: {
+            title: "JavaScript Projects",
+            desc: "Build real-world projects using modern JavaScript (ES6+).",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "Professional JavaScript Techniques",
+            desc: "Advance your JavaScript skills for professional web development.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "Asynchronous JavaScript",
+            desc: "Master promises, async/await, and working with APIs.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "JavaScript Security Practices",
+            desc: "Avoid XSS and other vulnerabilities in your JavaScript code.",
+            link: "https://shkolladigjitale.com/"
+          }
+        },
+        advanced: {
+          build: {
+            title: "Advanced JavaScript & Frameworks",
+            desc: "Work with frameworks like React or Vue and advanced JS patterns.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "JavaScript for Web Professionals",
+            desc: "Optimize and maintain large-scale JavaScript applications.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "Cutting-Edge JavaScript Features",
+            desc: "Explore the latest JavaScript standards and experimental features.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "JavaScript Security Mastery",
+            desc: "Master advanced security techniques for JavaScript applications.",
+            link: "https://shkolladigjitale.com/"
+          }
+        }
+      },
+      cybersecurity: {
+        beginner: {
+          build: {
+            title: "Cybersecurity Basics: Protect Your Website",
+            desc: "Learn the fundamentals of keeping your website and data safe online.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "Cybersecurity for Career Starters",
+            desc: "Get the essential skills to begin a career in cybersecurity.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "Cybersecurity Fundamentals",
+            desc: "Understand threats, vulnerabilities, and basic protection techniques.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "Web Security Essentials",
+            desc: "Learn how to secure your website from common attacks.",
+            link: "https://shkolladigjitale.com/"
+          }
+        },
+        intermediate: {
+          build: {
+            title: "Hands-On Cybersecurity Projects",
+            desc: "Apply your knowledge to real-world security challenges and labs.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "Professional Cybersecurity Techniques",
+            desc: "Advance your skills for a professional cybersecurity role.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "Network Security & Encryption",
+            desc: "Dive deeper into securing networks and encrypting data.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "Cybersecurity Best Practices",
+            desc: "Implement best practices to protect digital assets.",
+            link: "https://shkolladigjitale.com/"
+          }
+        },
+        advanced: {
+          build: {
+            title: "Advanced Cybersecurity & Ethical Hacking",
+            desc: "Master penetration testing, ethical hacking, and advanced defense.",
+            link: "https://shkolladigjitale.com/"
+          },
+          career: {
+            title: "Cybersecurity for Experts",
+            desc: "Lead security teams and manage enterprise-level security.",
+            link: "https://shkolladigjitale.com/"
+          },
+          learn: {
+            title: "Cutting-Edge Cybersecurity",
+            desc: "Explore the latest trends and technologies in cybersecurity.",
+            link: "https://shkolladigjitale.com/"
+          },
+          secure: {
+            title: "Cybersecurity Mastery",
+            desc: "Master advanced techniques to secure complex systems.",
+            link: "https://shkolladigjitale.com/"
+          }
+        }
+      }
+    };
+
+    document.getElementById('ai-course-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const interest = document.getElementById('interest').value;
+      const level = document.getElementById('level').value;
+      const goal = document.getElementById('goal').value;
+      let resultDiv = document.getElementById('ai-course-result');
+      if (interest && level && goal) {
+        const course = courseData[interest][level][goal];
+        resultDiv.innerHTML = `
+          <div class="card mt-4 shadow" style="background:#fff; color:#000; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.10); border:none;">
+            <div class="card-body" style="padding:32px;">
+              <h4 class="card-title" style="font-weight:700; color:#000;">${course.title}</h4>
+              <p class="card-text" style="font-size:1.1em; color:#222;">${course.desc}</p>
+              <a href="${course.link}" class="btn btn-primary" target="_blank" style="background:#000; color:#fff; border:none; font-weight:600; font-size:1.05em; border-radius:8px; padding:10px 28px;">Go to Course</a>
+            </div>
+          </div>
+        `;
+      } else {
+        resultDiv.innerHTML = `<div class="alert alert-warning mt-3" style="background:#eee; color:#222; border-radius:8px; border:none;">Please answer all questions to generate a course.</div>`;
+      }
+    });
+
+    // Advanced AI Course Generator Logic
+    const advancedCourseData = {
+      html: {
+        beginner: {
+          build: {
+            title: "HTML Basics: Build Your First Web Page",
+            desc: "Start from scratch and create your first web page using HTML. Learn about tags, structure, and best practices.",
+            duration: "1 week",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Includes short video lessons for each concept.",
+            text: "Step-by-step written guides and examples.",
+            interactive: "Practice with live HTML editors.",
+            project: "Build a personal homepage as your final project."
+          },
+          career: {
+            title: "HTML for Career Starters",
+            desc: "Master the essentials of HTML to kickstart your journey in web development.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Includes video tutorials and real-world examples.",
+            text: "Comprehensive text resources and documentation.",
+            interactive: "Interactive coding challenges and quizzes.",
+            project: "Create a professional-looking portfolio site."
+          },
+          learn: {
+            title: "HTML Fundamentals",
+            desc: "Understand the building blocks of the web and how to structure content effectively.",
+            duration: "1-2 weeks",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Basic video lessons covering HTML syntax and structure.",
+            text: "Introductory text materials and references.",
+            interactive: "Simple exercises to practice HTML coding.",
+            project: "No project required, focus on learning basics."
+          },
+          secure: {
+            title: "HTML & Web Security Basics",
+            desc: "Learn how to write safe HTML and avoid common security pitfalls.",
+            duration: "1 week",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Short videos on HTML security best practices.",
+            text: "Guidelines and checklists for secure HTML coding.",
+            interactive: "Security-focused HTML exercises.",
+            project: "Audit and improve the security of an existing HTML page."
+          }
+        },
+        intermediate: {
+          build: {
+            title: "HTML5 Projects",
+            desc: "Apply your HTML knowledge to real-world projects using HTML5 features.",
+            duration: "2-3 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Project walkthrough videos and HTML5 tutorials.",
+            text: "Detailed project briefs and HTML5 documentation.",
+            interactive: "HTML5 coding challenges and sandbox environments.",
+            project: "Build a multi-page website using HTML5."
+          },
+          career: {
+            title: "Professional HTML Techniques",
+            desc: "Take your HTML skills to the next level for professional web development.",
+            duration: "3 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "In-depth videos on advanced HTML topics.",
+            text: "Professional-grade text resources and case studies.",
+            interactive: "Advanced HTML exercises and peer reviews.",
+            project: "Create a complex web application frontend."
+          },
+          learn: {
+            title: "Semantic HTML & Accessibility",
+            desc: "Deepen your understanding of semantic markup and accessible web design.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Videos on semantic HTML and accessibility standards.",
+            text: "Resources on WCAG guidelines and semantic best practices.",
+            interactive: "Accessibility evaluation exercises.",
+            project: "Revise a website to improve its accessibility."
+          },
+          secure: {
+            title: "HTML Security Practices",
+            desc: "Learn how to prevent XSS and other vulnerabilities in your HTML code.",
+            duration: "1 week",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Security training videos focusing on HTML vulnerabilities.",
+            text: "Documentation on HTML security risks and mitigations.",
+            interactive: "HTML security testing and fixing exercises.",
+            project: "Conduct a security audit of a web project."
+          }
+        },
+        advanced: {
+          build: {
+            title: "Advanced HTML & APIs",
+            desc: "Integrate HTML with APIs and advanced web technologies.",
+            duration: "3-4 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Comprehensive videos on HTML APIs and integrations.",
+            text: "In-depth articles on using HTML with various APIs.",
+            interactive: "API integration challenges and HTML5 labs.",
+            project: "Develop a web app using HTML and external APIs."
+          },
+          career: {
+            title: "HTML for Web Professionals",
+            desc: "Optimize and maintain large-scale HTML projects for enterprise environments.",
+            duration: "4 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Expert videos on HTML for enterprise development.",
+            text: "Enterprise-level documentation and best practice guides.",
+            interactive: "Real-world problem solving and code optimization.",
+            project: "Lead a project to build a scalable web platform."
+          },
+          learn: {
+            title: "Cutting-Edge HTML Features",
+            desc: "Explore the latest HTML standards and experimental features.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Sneak peeks into upcoming HTML features and how to use them.",
+            text: "Latest HTML spec documents and feature overviews.",
+            interactive: "Beta testing new HTML features in safe environments.",
+            project: "Create a showcase site using cutting-edge HTML features."
+          },
+          secure: {
+            title: "HTML Security Mastery",
+            desc: "Master advanced security techniques for HTML-based applications.",
+            duration: "3 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Masterclass videos on HTML security from industry experts.",
+            text: "Advanced readings on security vulnerabilities and defenses.",
+            interactive: "Simulations of security attacks and defenses.",
+            project: "Develop a secure HTML application from the ground up."
+          }
+        }
+      },
+      css: {
+        beginner: {
+          build: {
+            title: "CSS Basics: Style Your First Website",
+            desc: "Learn how to add colors, fonts, and layouts to your web pages with CSS.",
+            duration: "1 week",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Includes short video lessons for CSS basics.",
+            text: "Step-by-step written guides on CSS syntax and properties.",
+            interactive: "Practice styling with live CSS editors.",
+            project: "Build a simple, styled webpage as your final project."
+          },
+          career: {
+            title: "CSS for Career Starters",
+            desc: "Get the foundational CSS skills needed for entry-level web design jobs.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Video tutorials on CSS for professional use.",
+            text: "Comprehensive text resources on CSS techniques.",
+            interactive: "Interactive CSS challenges and quizzes.",
+            project: "Create a personal portfolio site with advanced CSS."
+          },
+          learn: {
+            title: "CSS Fundamentals",
+            desc: "Understand selectors, properties, and how to style HTML elements.",
+            duration: "1-2 weeks",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Basic video lessons covering CSS fundamentals.",
+            text: "Introductory text materials and CSS references.",
+            interactive: "Simple exercises to practice CSS styling.",
+            project: "No project required, focus on learning CSS basics."
+          },
+          secure: {
+            title: "CSS & Web Security Basics",
+            desc: "Learn how CSS can impact security and best practices for safe styling.",
+            duration: "1 week",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Short videos on CSS security best practices.",
+            text: "Guidelines and checklists for secure CSS coding.",
+            interactive: "Security-focused CSS exercises.",
+            project: "Audit and improve the security of an existing CSS stylesheet."
+          }
+        },
+        intermediate: {
+          build: {
+            title: "Responsive CSS Projects",
+            desc: "Create responsive layouts and modern designs using Flexbox and Grid.",
+            duration: "2-3 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Project walkthrough videos for responsive design.",
+            text: "Detailed project briefs and CSS Flexbox/Grid documentation.",
+            interactive: "Responsive design coding challenges.",
+            project: "Build a fully responsive website from scratch."
+          },
+          career: {
+            title: "Professional CSS Techniques",
+            desc: "Advance your CSS skills for professional web development.",
+            duration: "3 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "In-depth videos on advanced CSS techniques.",
+            text: "Professional-grade text resources and case studies.",
+            interactive: "Advanced CSS exercises and peer reviews.",
+            project: "Create a complex, responsive web application."
+          },
+          learn: {
+            title: "CSS Animations & Transitions",
+            desc: "Bring your websites to life with CSS animations and transitions.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Videos on creating animations and transitions in CSS.",
+            text: "Resources on CSS animation properties and best practices.",
+            interactive: "Animation and transition coding exercises.",
+            project: "Add animations to an existing website project."
+          },
+          secure: {
+            title: "CSS Security Practices",
+            desc: "Avoid common CSS vulnerabilities and ensure your stylesheets are safe.",
+            duration: "1 week",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Security training videos focusing on CSS vulnerabilities.",
+            text: "Documentation on CSS security risks and mitigations.",
+            interactive: "CSS security testing and fixing exercises.",
+            project: "Conduct a security audit of a CSS codebase."
+          }
+        },
+        advanced: {
+          build: {
+            title: "Advanced CSS & Preprocessors",
+            desc: "Master Sass, Less, and advanced CSS methodologies for scalable projects.",
+            duration: "3-4 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Comprehensive videos on CSS preprocessors and methodologies.",
+            text: "In-depth articles on using Sass, Less, and advanced CSS techniques.",
+            interactive: "Preprocessor coding challenges and CSS labs.",
+            project: "Develop a scalable CSS architecture for a large project."
+          },
+          career: {
+            title: "CSS for Web Professionals",
+            desc: "Optimize and maintain large-scale CSS codebases for enterprise sites.",
+            duration: "4 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Expert videos on CSS for enterprise development.",
+            text: "Enterprise-level documentation and best practice guides.",
+            interactive: "Real-world problem solving and CSS optimization.",
+            project: "Lead a project to build a scalable CSS framework."
+          },
+          learn: {
+            title: "Cutting-Edge CSS Features",
+            desc: "Explore the latest CSS standards and experimental features.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Sneak peeks into upcoming CSS features and how to use them.",
+            text: "Latest CSS spec documents and feature overviews.",
+            interactive: "Beta testing new CSS features in safe environments.",
+            project: "Create a showcase site using cutting-edge CSS features."
+          },
+          secure: {
+            title: "CSS Security Mastery",
+            desc: "Master advanced security techniques for CSS and web styling.",
+            duration: "3 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Masterclass videos on CSS security from industry experts.",
+            text: "Advanced readings on security vulnerabilities and defenses.",
+            interactive: "Simulations of security attacks and defenses.",
+            project: "Develop a secure CSS application from the ground up."
+          }
+        }
+      },
+      js: {
+        beginner: {
+          build: {
+            title: "JavaScript Basics: Make Your Site Interactive",
+            desc: "Learn how to add interactivity to your web pages with JavaScript fundamentals.",
+            duration: "1 week",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Includes short video lessons for JavaScript basics.",
+            text: "Step-by-step written guides on JavaScript syntax and DOM manipulation.",
+            interactive: "Practice JavaScript coding with live editors.",
+            project: "Build a simple interactive webpage as your final project."
+          },
+          career: {
+            title: "JavaScript for Career Starters",
+            desc: "Get the essential JavaScript skills for entry-level developer roles.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Video tutorials on JavaScript for professional use.",
+            text: "Comprehensive text resources on JavaScript techniques.",
+            interactive: "Interactive JavaScript challenges and quizzes.",
+            project: "Create a personal portfolio site with JavaScript interactivity."
+          },
+          learn: {
+            title: "JavaScript Fundamentals",
+            desc: "Understand variables, functions, and how to manipulate the DOM.",
+            duration: "1-2 weeks",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Basic video lessons covering JavaScript fundamentals.",
+            text: "Introductory text materials and JavaScript references.",
+            interactive: "Simple exercises to practice JavaScript coding.",
+            project: "No project required, focus on learning JavaScript basics."
+          },
+          secure: {
+            title: "JavaScript & Web Security Basics",
+            desc: "Learn how to write safe JavaScript and avoid common security issues.",
+            duration: "1 week",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Short videos on JavaScript security best practices.",
+            text: "Guidelines and checklists for secure JavaScript coding.",
+            interactive: "Security-focused JavaScript exercises.",
+            project: "Audit and improve the security of an existing JavaScript code."
+          }
+        },
+        intermediate: {
+          build: {
+            title: "JavaScript Projects",
+            desc: "Build real-world projects using modern JavaScript (ES6+).",
+            duration: "2-3 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Project walkthrough videos for JavaScript projects.",
+            text: "Detailed project briefs and JavaScript documentation.",
+            interactive: "JavaScript coding challenges and sandbox environments.",
+            project: "Build a multi-page web application using JavaScript."
+          },
+          career: {
+            title: "Professional JavaScript Techniques",
+            desc: "Advance your JavaScript skills for professional web development.",
+            duration: "3 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "In-depth videos on advanced JavaScript topics.",
+            text: "Professional-grade text resources and case studies.",
+            interactive: "Advanced JavaScript exercises and peer reviews.",
+            project: "Create a complex web application with JavaScript and APIs."
+          },
+          learn: {
+            title: "Asynchronous JavaScript",
+            desc: "Master promises, async/await, and working with APIs.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Videos on asynchronous JavaScript and API interactions.",
+            text: "Resources on JavaScript async patterns and best practices.",
+            interactive: "Async JavaScript coding exercises.",
+            project: "Integrate an API into an existing project."
+          },
+          secure: {
+            title: "JavaScript Security Practices",
+            desc: "Avoid XSS and other vulnerabilities in your JavaScript code.",
+            duration: "1 week",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Security training videos focusing on JavaScript vulnerabilities.",
+            text: "Documentation on JavaScript security risks and mitigations.",
+            interactive: "JavaScript security testing and fixing exercises.",
+            project: "Conduct a security audit of a JavaScript application."
+          }
+        },
+        advanced: {
+          build: {
+            title: "Advanced JavaScript & Frameworks",
+            desc: "Work with frameworks like React or Vue and advanced JS patterns.",
+            duration: "3-4 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Comprehensive videos on JavaScript frameworks and advanced topics.",
+            text: "In-depth articles on using React, Vue, and advanced JavaScript techniques.",
+            interactive: "Framework-specific coding challenges and labs.",
+            project: "Develop a full-stack web application using JavaScript and a framework."
+          },
+          career: {
+            title: "JavaScript for Web Professionals",
+            desc: "Optimize and maintain large-scale JavaScript applications.",
+            duration: "4 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Expert videos on JavaScript for enterprise development.",
+            text: "Enterprise-level documentation and best practice guides.",
+            interactive: "Real-world problem solving and JavaScript optimization.",
+            project: "Lead a project to build a scalable JavaScript application."
+          },
+          learn: {
+            title: "Cutting-Edge JavaScript Features",
+            desc: "Explore the latest JavaScript standards and experimental features.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Sneak peeks into upcoming JavaScript features and how to use them.",
+            text: "Latest JavaScript spec documents and feature overviews.",
+            interactive: "Beta testing new JavaScript features in safe environments.",
+            project: "Create a showcase site using cutting-edge JavaScript features."
+          },
+          secure: {
+            title: "JavaScript Security Mastery",
+            desc: "Master advanced security techniques for JavaScript applications.",
+            duration: "3 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Masterclass videos on JavaScript security from industry experts.",
+            text: "Advanced readings on security vulnerabilities and defenses.",
+            interactive: "Simulations of security attacks and defenses.",
+            project: "Develop a secure JavaScript application with advanced features."
+          }
+        }
+      },
+      cybersecurity: {
+        beginner: {
+          build: {
+            title: "Cybersecurity Basics: Protect Your Website",
+            desc: "Learn the fundamentals of keeping your website and data safe online.",
+            duration: "1 week",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Includes short video lessons on cybersecurity basics.",
+            text: "Step-by-step guides on web security fundamentals.",
+            interactive: "Practice identifying security vulnerabilities.",
+            project: "Secure a sample website as your final project."
+          },
+          career: {
+            title: "Cybersecurity for Career Starters",
+            desc: "Get the essential skills to begin a career in cybersecurity.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Video tutorials on cybersecurity concepts and tools.",
+            text: "Comprehensive text resources on cybersecurity practices.",
+            interactive: "Interactive cybersecurity challenges and labs.",
+            project: "Create a security plan for a small business website."
+          },
+          learn: {
+            title: "Cybersecurity Fundamentals",
+            desc: "Understand threats, vulnerabilities, and basic protection techniques.",
+            duration: "1-2 weeks",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Basic video lessons covering cybersecurity essentials.",
+            text: "Introductory text materials and cybersecurity references.",
+            interactive: "Simple exercises to practice security concepts.",
+            project: "No project required, focus on learning cybersecurity basics."
+          },
+          secure: {
+            title: "Web Security Essentials",
+            desc: "Learn how to secure your website from common attacks.",
+            duration: "1 week",
+            difficulty: "Easy",
+            link: "https://shkolladigjitale.com/",
+            video: "Short videos on web security best practices.",
+            text: "Guidelines and checklists for securing web applications.",
+            interactive: "Security-focused web exercises.",
+            project: "Audit and improve the security of an existing website."
+          }
+        },
+        intermediate: {
+          build: {
+            title: "Hands-On Cybersecurity Projects",
+            desc: "Apply your knowledge to real-world security challenges and labs.",
+            duration: "2-3 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Project walkthrough videos for cybersecurity projects.",
+            text: "Detailed project briefs and cybersecurity documentation.",
+            interactive: "Cybersecurity coding challenges and sandbox environments.",
+            project: "Build a security tool or script as a project."
+          },
+          career: {
+            title: "Professional Cybersecurity Techniques",
+            desc: "Advance your skills for a professional cybersecurity role.",
+            duration: "3 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "In-depth videos on professional cybersecurity practices.",
+            text: "Professional-grade text resources and case studies.",
+            interactive: "Advanced cybersecurity exercises and peer reviews.",
+            project: "Create a comprehensive security assessment for an organization."
+          },
+          learn: {
+            title: "Network Security & Encryption",
+            desc: "Dive deeper into securing networks and encrypting data.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Videos on network security principles and encryption techniques.",
+            text: "Resources on securing networks and data protection.",
+            interactive: "Network security labs and encryption exercises.",
+            project: "Set up a secure network and demonstrate encryption methods."
+          },
+          secure: {
+            title: "Cybersecurity Best Practices",
+            desc: "Implement best practices to protect digital assets.",
+            duration: "1 week",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Training videos on cybersecurity best practices.",
+            text: "Documentation on best practices for web and data security.",
+            interactive: "Best practices implementation exercises.",
+            project: "Develop a security policy document for an organization."
+          }
+        },
+        advanced: {
+          build: {
+            title: "Advanced Cybersecurity & Ethical Hacking",
+            desc: "Master penetration testing, ethical hacking, and advanced defense.",
+            duration: "3-4 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Comprehensive videos on ethical hacking and advanced cybersecurity.",
+            text: "In-depth articles on penetration testing and security defenses.",
+            interactive: "Ethical hacking simulations and labs.",
+            project: "Conduct a penetration test and report findings."
+          },
+          career: {
+            title: "Cybersecurity for Experts",
+            desc: "Lead security teams and manage enterprise-level security.",
+            duration: "4 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Expert videos on managing cybersecurity in enterprises.",
+            text: "Enterprise-level documentation and best practice guides.",
+            interactive: "Real-world problem solving and security management.",
+            project: "Design and implement a security architecture for a large organization."
+          },
+          learn: {
+            title: "Cutting-Edge Cybersecurity",
+            desc: "Explore the latest trends and technologies in cybersecurity.",
+            duration: "2 weeks",
+            difficulty: "Medium",
+            link: "https://shkolladigjitale.com/",
+            video: "Sneak peeks into upcoming cybersecurity technologies.",
+            text: "Latest cybersecurity research papers and trend reports.",
+            interactive: "Beta testing new security tools and technologies.",
+            project: "Create a research project on a cutting-edge cybersecurity topic."
+          },
+          secure: {
+            title: "Cybersecurity Mastery",
+            desc: "Master advanced techniques to secure complex systems.",
+            duration: "3 weeks",
+            difficulty: "Hard",
+            link: "https://shkolladigjitale.com/",
+            video: "Masterclass videos on advanced cybersecurity techniques.",
+            text: "Advanced readings on security architecture and engineering.",
+            interactive: "Simulations of complex security scenarios.",
+            project: "Develop a comprehensive security solution for a complex system."
+          }
+        }
+      }
+    };
+
+    // Helper to get a random fallback if not found
+    function getAdvancedCourse(topic, level, goal) {
+      let data = advancedCourseData[topic];
+      if (!data) return null;
+      let lvl = data[level] || data["beginner"];
+      let g = lvl[goal] || lvl["learn"];
+      return g;
+    }
+
+    document.getElementById('ai-course-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const interest = document.getElementById('interest').value;
+      const level = document.getElementById('level').value;
+      const goal = document.getElementById('goal').value;
+      const time = document.getElementById('time').value;
+      const style = document.getElementById('style').value;
+      let resultDiv = document.getElementById('ai-course-result');
+      if (interest && level && goal && time && style) {
+        let course = getAdvancedCourse(interest, level, goal);
+        if (!course) {
+          resultDiv.innerHTML = `<div class="alert alert-warning mt-3" style="background:#eee; color:#222; border-radius:8px; border:none;">Sorry, no course found for your selection.</div>`;
+          return;
+        }
+        // Pick learning style description
+        let styleDesc = course[style] || "";
+        // Estimate duration based on time
+        let duration = course.duration;
+        if (time === "2") duration = "2-3 weeks";
+        else if (time === "5") duration = "1-2 weeks";
+        else if (time === "10") duration = "1 week or less";
+        resultDiv.innerHTML = `
+          <div class="card mt-4 shadow" style="background:#fff; color:#000; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.10); border:none;">
+            <div class="card-body" style="padding:32px;">
+              <h4 class="card-title" style="font-weight:700; color:#000;">${course.title}</h4>
+              <p class="card-text" style="font-size:1.1em; color:#222;">${course.desc}</p>
+              <ul style="list-style:none; padding:0; margin-bottom:18px;">
+                <li><strong>Estimated Duration:</strong> ${duration}</li>
+                <li><strong>Difficulty:</strong> ${course.difficulty}</li>
+                <li><strong>Learning Style:</strong> ${styleDesc}</li>
+              </ul>
+              <a href="${course.link}" class="btn btn-primary" target="_blank" style="background:#000; color:#fff; border:none; font-weight:600; font-size:1.05em; border-radius:8px; padding:10px 28px;">Go to Course</a>
+            </div>
+          </div>
+        `;
+      } else {
+        resultDiv.innerHTML = `<div class="alert alert-warning mt-3" style="background:#eee; color:#222; border-radius:8px; border:none;">Please answer all questions to generate a course.</div>`;
+      }
+    });
+  </script>
 
   <div class="section fun-facts">
     <div class="container">
@@ -476,8 +1516,6 @@
       </div>
     </div>
   </div> 
-
-
 
   <div class="contact-us section" id="contact">
     <div class="container">
